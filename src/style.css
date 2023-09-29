@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  -webkit-font-smoothing: auto;
+  -moz-font-smoothing: auto;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  background-color: #0e1726;
+}
+
+main {
+  min-height: 90vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  background-color: #181e2e;
+  padding-inline: 10px;
+}
+
+#graphic {
+  width: 100%;
+  overflow: hidden;
+}
+
+#graphic img {
+  max-width: 100%;
+}
+
+#content {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#content h1,
+#content p {
+  margin-top: 0px;
+}
+
+#content a,
+#content p {
+  color: #7b7979;
+}
+
+#content a {
+  font-weight: bold;
+}
+
+#content a:hover {
+  color: #414141;
+  cursor: pointer;
+}
+.title {
+  color: white;
+  height: 10%;
+  width: 100%;
+  border-bottom: 1px solid #242d42;
+}
+.container {
+  width: 100%;
+  min-height: 90%;
+}
+.sub {
+  display: flex;
+  height: 100%;
+}
+.left {
+  flex: 5;
+  border-right: 1px solid #242d42;
+}
+.right {
+  flex: 2;
+}
+.rooms__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-block: 20px;
+  place-items: center;
+  gap: 20px;
+  height: 100%;
+}
+.room__box {
+  cursor: pointer;
+  height: 110px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f3640;
+  text-align: center;
+  font-size: 15px;
+}
+.room__box:hover {
+  background-color: #242d42;
+}
+table,
+th,
+td {
+  border: 1px solid #2f3640;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  color: white;
+  gap: 20px;
+}
+.userInfo .table__container {
+  border-top: 1px solid #242d42;
+}
+
+@media screen and (max-width: 500px) {
+  .sub {
+    flex-direction: column;
+  }
+  .left {
+    border-right: none;
+    margin-bottom: 5px;
+  }
+  .room__box {
+    width: 90px;
+    font-size: 13px;
+  }
+}
